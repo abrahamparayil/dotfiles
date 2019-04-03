@@ -1,0 +1,72 @@
+# customize a theme
+py3status {
+   align = 'left'
+   markup = 'pango'
+   min_width = 20
+   separator = True
+   separator_block_width = 9
+
+   background = '#285577'
+   border = '#4c7899'
+   border_bottom = 1
+   border_left = 1
+   border_right = 1
+   border_top = 1
+
+   min_length = 15
+   position = 'right'
+}
+
+order += "volume master"
+order += "wifi"
+order += "imap"
+order += "cmus"
+order += "spotify"
+order += "battery_level"
+order += "time"
+order += "whoami"
+
+
+volume master {
+       format = " ♪: %volume  " 
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+	# termsyn font
+	#format = "À %volume "
+}
+
+wifi {
+      border = '#ffffff'
+      format_up = "W: {ssid} at {signal_percent}"
+      format_down = ""
+      color_good = '#282828'
+      color_bad = '#F34A3B'
+}
+
+ethernet eth0 {
+        # if you use %speed, i3status requires the cap_net_admin capability
+        format_up = "E: %ip"
+        format_down = ""
+}
+
+spotify{
+        format = "  {title} by {artist}"
+        format_down = ""
+	on_click 1 = "exec --no-startup-id spotify"
+}
+cmus{
+        format_up = "{title} by {artist} : {positiontime}"
+        format_down = ""
+}
+time {
+	format = "  %A,%e %B   %H:%M"
+	on_click 1 = "exec --no-startup-id gahshomar"
+}
+battery_level{
+	blocks = ""
+	charging_character = ""
+	format = " {percent} {icon} {time_remaining}"
+	color_charging = "#FFFFFF"
+	cache_timeout = 5
+}
