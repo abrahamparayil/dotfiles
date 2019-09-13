@@ -1,0 +1,13 @@
+/* i3 Gruvbox
+   Author: Adam Schaefers (https://github.com/a-schaefers/) based on Gruvbox Theme (https://github.com/morhetz/gruvbox) by Pavel Pertsev (https://github.com/morhetz/)*/
+
+@define-color bg       #282828;
+@define-color white    #fbf1c7;
+@define-color red      #cc241d;
+@define-color green    #689d6a;
+@define-color yellow   #d79921;
+@define-color blue     #458588;
+@define-color purple   #b16286;
+@define-color aqua     #689d68;
+@define-color gray     #a89984;
+@define-color black    #1d2021;
