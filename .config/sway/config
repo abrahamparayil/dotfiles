@@ -177,8 +177,8 @@ bindsym shift+XF86AudioRaiseVolume exec --no-startup-id ~/.config/scripts/mic_up
 bindsym XF86MonBrightnessUp exec brightnessctl set 47+
 bindsym XF86MonBrightnessDOwn exec brightnessctl set 47-
 # Screenshot
-bindsym Print exec grim "~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%I-%M-%S).png"
-bindsym shift+print exec grim -g "$(slurp)" "~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%I-%M-%S).png"
+bindsym print exec grim -o eDP-1 ~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%I-%M-%S).png
+bindsym shift+print exec grim -g "$(slurp)" ~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%I-%M-%S).png
 
 # Rice colors
 include gruvbox
@@ -198,7 +198,7 @@ bindsym $mod+shift+w exec ~/.config/scripts/chpaper.sh
 #########################################
 
 bindsym $mod+F1 exec emacs
-bindsym $mod+i exec emacs ~/.config/i3/config
+bindsym $mod+i exec emacs ~/.config/sway/config
 bindsym $mod+F2 exec firefox
 bindsym $mod+Shift+F2 exec firefox -private-window
 bindsym $mod+F3 exec st -e 'ranger'
@@ -210,8 +210,10 @@ bindsym $mod+F5 exec riot-desktop
 bindsym $mod+F6 exec telegram-desktop
 bindsym $mod+F7 exec sxiv Pictures/Wallpapers
 bindsym Mod1+Space exec rofi -show drun
+bindsym $mod+Shift+c exec --no-startup-id ~/.config/scripts/colorpicker.sh
 
 # (No) Title Bars
 for_window [class="St"] border pixel 2
 for_window [class="St"] floating enable
 for_window [class="firefox"] border pixel 2
+
