@@ -1,0 +1,186 @@
+@import 'gruvbox.css';
+* {
+  border: none;
+  border-radius: 0;
+  font-family: FiraMono, Manjari, FontAwesome;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: @bg;
+  color: @white;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+/*
+   window#waybar.empty {
+   background-color: transparent;
+   }
+   window#waybar.solo {
+   background-color: @WHITE;
+   }
+ */
+
+#workspaces button {
+  padding: 0 5px;
+  color: @yellow;
+  background-color: transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: @black;
+}
+
+#workspaces button.focused {
+  background-color: @aqua;
+  color: @bg;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#mode {
+  background-color: @yellow;
+  color: @black;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: @white;
+}
+
+#clock {
+  background-color: @bg;
+}
+
+#battery {
+  background-color: @bg;
+  color: @white;
+}
+
+#battery.charging {
+  color: @white;
+  background-color: #26A65B;
+}
+
+@keyframes blink {
+  to {
+    background-color: @white;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+    animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: @bg;
+}
+
+#cpu {
+  background-color: @bg;
+  color: #000000;
+}
+
+#memory {
+  background-color: @bg;
+}
+
+#backlight {
+  background-color: @bg;
+}
+
+#network {
+  background-color:@bg;
+}
+
+#network.disconnected {
+  color: #f53c3c;
+}
+
+#pulseaudio {
+  background-color: @bg;
+  color: @white;
+}
+
+#pulseaudio.muted {
+  color: #2a5c45;
+}
+
+#custom-media {
+  background-color: #66cc99;
+  color: #2a5c45;
+  min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+  background-color: @bg;
+}
+
+#custom-media.custom-vlc {
+  color: #ffa000;
+}
+
+#temperature {
+  background-color: #f0932b;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+#tray {
+  background-color: #2980b9;
+}
+
+#idle_inhibitor {
+  background-color: @bg;
+}
+
+#idle_inhibitor.activated {
+  background-color: @bg;
+  color: @white;
+}
+
+#mpd {
+  background-color: @bg;
+  color: @white;
+}
+
+#mpd.disconnected {
+  color: #f53c3c;
+}
+
+#mpd.stopped {
+  background-color: @bg;
+}
+
+#mpd.paused {
+  background-color: @bg;
+}
