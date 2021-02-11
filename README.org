@@ -1,4 +1,4 @@
-#+TITLE: Readme
+#+TITLE: Dotfiles
 #+AUTHOR: Abraham Raji
 
 Dotfiles. Without these, I'd be lost.
@@ -10,3 +10,6 @@ Dotfiles. Without these, I'd be lost.
 - Web Browser: Firefox
 - Music: MPD+Emacs
 - Almost Everything Else: Emacs
+
+** Screenshot
+[[Hello][file:./screenshot.png]]
