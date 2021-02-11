@@ -1,0 +1,44 @@
+theme = "gruvbox-dark"
+icons = "awesome"
+
+[[block]]
+block = "focused_window"
+max_width = 100
+
+[[block]]
+block = "net"
+device = "wlp3s0"
+ssid = true
+signal_strength = false
+ip = false
+speed_up = false
+graph_up = false
+interval = 5
+use_bits = true
+speed_down = false
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "music"
+player = "mpd"
+buttons = ["prev", "play", "next"]
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}% {time}"
+device = "BAT1"
+
+[[block]]
+block = "time"
+interval = 1
+format = " %A %d %B %Y %I:%M %p"
+
+[[block]]
+block = "custom"
+command = "echo Abraham Raji"

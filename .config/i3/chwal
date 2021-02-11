@@ -1,0 +1,2 @@
+# A simple script to change to a random walpaper from a specific folder when executed
+feh --recursive --randomize --bg-fill  ~/Pictures/Wallpapers/*
