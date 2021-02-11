@@ -1,0 +1,126 @@
+/**
+ * A dark floating box version of the paper theme.
+ *
+ * User: Avronr
+ * Copyright: Abraham Raji
+ */
+* {
+    blue:  #689d6a;
+    white: #FDF1C7;
+    black: #1D2021;
+    grey:  #EBDBBE;
+    spacing: 2;
+    background-color: #1d202100;
+    border-color: #3c3836FF;
+    anchor: north;
+    location: center;
+}
+#window {
+    transparency: "screenshot";
+    background-color: #1d202100;
+    border: 0;
+    padding: 0% 0% 1em 0%;
+    x-offset: 0;
+    y-offset: -20%;
+}
+#mainbox {
+    padding: 0px;
+    border: 0;
+    spacing: 1%;
+}
+#message {
+    border: 2px; 
+    padding: 1em; 
+    background-color: @black;
+    text-color: @white;
+}
+#textbox normal {
+    text-color: #fbf1c7FF;
+    padding: 0;
+    border: 0;
+}
+#listview {
+    fixed-height: 1;
+    border: 2px;
+    padding: 1em;
+    reverse: false;
+
+    columns: 1;
+    background-color: @black;
+}
+#element {
+    border: 0;
+    padding: 2px;
+    highlight: bold ;
+}
+#element normal.normal {
+    text-color: #fdf1c7FF;
+    background-color: #FDF1C700;
+}
+#element normal.urgent {
+    text-color: #D75F00FF;
+    background-color: #FDF1C7FF;
+}
+#element normal.active {
+    text-color: #005F87FF;
+    background-color: #FDF1C7FF;
+}
+#element selected.normal {
+    text-color: #FDF1C7FF;
+    background-color: #689d6aFF;
+}
+#element selected.urgent {
+    text-color: #FDF1C7FF;
+    background-color: #D75F00FF;
+}
+#element selected.active {
+    text-color: #FDF1C7FF;
+    background-color: #005F87FF;
+}
+#element alternate.normal {
+    text-color: #fdf1c7FF;
+    background-color: #282828FF;
+}
+#element alternate.urgent {
+    text-color: #D75F00FF;
+    background-color: #282828FF;
+}
+#element alternate.active {
+    text-color: #005F87FF;
+    background-color: #282828FF;
+}
+#scrollbar {
+    border: 0;
+    padding: 0;
+}
+#inputbar {
+    spacing: 0;
+    border: 2px;
+    padding: 0.5em 1em;
+    background-color: #fbf1c7FF;
+    text-color: #1d2021ff;
+    index: 0;
+}
+#inputbar normal {
+    foreground-color: #1d2021FF;
+    background-color: #fbf1c700;
+}
+
+#mode-switcher {
+    border: 2px;
+    padding: 0.5em 1em;
+    background-color: @grey;
+    index: 10;
+}
+#button selected {
+    text-color: #689d6aFF;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: #1d2021ff;
+}

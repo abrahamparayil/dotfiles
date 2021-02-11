@@ -1,6 +1,6 @@
 modi: "drun,run";
-font: "Fira Code Retina 12";
+font: "MesloLGS NF";
 show-icons: true;
 terminal: "st";
 sort: false;
-rofi.theme: /usr/share/rofi/themes/gruvbox-dark.rasi
+rofi.theme: paper-float-dark.rasi
