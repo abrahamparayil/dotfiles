@@ -1,0 +1,12 @@
+#+TITLE: Readme
+#+AUTHOR: Abraham Raji
+
+Dotfiles. Without these, I'd be lost.
+** My Current Setup
+- WM: BSPWM
+- Bar: Polybar
+- Keyboard Daemon: SXHKD
+- File Browser: Ranger, Nautilus
+- Web Browser: Firefox
+- Music: MPD+Emacs
+- Almost Everything Else: Emacs
