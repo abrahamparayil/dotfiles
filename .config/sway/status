@@ -1,0 +1,26 @@
+#!/usr/bin/sh
+uptime_formatted=$(uptime -p | cut -c 4-)
+
+# The abbreviated weekday (e.g., "Sat"), followed by the ISO-formatted date
+# like 2018-10-06 and the time (e.g., 07:01)
+date_formatted=$(date "+%a %F %I:%M")
+
+# Get the SSID of your current connection
+network_name=$(nmcli -t -f ssid dev wifi)
+
+# Get the Linux version but remove the "-1-ARCH" part
+linux_version=$(uname -r | cut -d '-' -f1)
+
+# Returns the battery info, status and percentage.
+battery_status=$(cat /sys/class/power_supply/BAT1/status)
+battery_percent=$(cat /sys/class/power_supply/BAT1/capacity)
+
+# Returns the title,artist and album
+now_playing=$(playerctl metadata --format "▶ {{title }} 👤 {{ artist }} [ {{ album }} ] ")
+
+# Returns screen brightness
+brightness=$(brightnessctl | grep '(' | cut -d '(' -f2 | cut -d ')' -f1)
+
+# Emojis and characters for the status bar
+# 💎 💻 💡 🔌  📁 \|
+echo $now_playing \| ​🌐 ​$network_name \| 💡 $brightness% \| $uptime_formatted ↑ \| $linux_version 🐧 \| $battery_status at $battery_percent% ⚡ \| $date_formatted
